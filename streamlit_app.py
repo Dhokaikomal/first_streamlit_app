@@ -21,5 +21,5 @@ streamlit.dataframe(my_fruit_list)
 
 # choose few fruit to set an example 
 fruits_selected=streamlit.multiselect("Pick some fruits:", list(my_fruit_list.index),['Avocado','Strawberries'])
-fruits_to_show=my_fruit_list.loc[fruits_selected]
+fruits_to_show=my_fruit_list.loc[fruits_selected]      # it will gives only avocado and strawberries data
 streamlit.dataframe(fruits_to_show)
