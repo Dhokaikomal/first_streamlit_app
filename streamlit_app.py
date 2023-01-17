@@ -27,7 +27,7 @@ streamlit.dataframe(fruits_to_show)
 
 # api with streamlit
 # new session to display fruity_vise_API response
-streamlit.header("Fruityvice Fruit Advice!")
+#streamlit.header("Fruityvice Fruit Advice!")
 
 import requests
 #fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
@@ -44,4 +44,8 @@ fruit_choice = streamlit.text_input('What fruit would you like information about
 streamlit.write('The user entered ', fruit_choice)
 
 fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
-streamlit.dataframe(fruity_vise_response)
+
+ruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
+# create a data frame
+streamlit.dataframe(fruityvice_normalized)
+
