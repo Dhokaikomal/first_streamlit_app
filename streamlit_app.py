@@ -30,7 +30,7 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 
 import requests
-# fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
+fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
 # streamlit.text(fruity_vise_response.json())      # write data on screen 
 
 # normalized version using pandas
