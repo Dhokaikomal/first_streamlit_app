@@ -30,13 +30,13 @@ streamlit.dataframe(fruits_to_show)
 streamlit.header("Fruityvice Fruit Advice!")
 
 import requests
-fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
+#fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
 # streamlit.text(fruity_vise_response.json())      # write data on screen 
 
 # normalized version using pandas
-fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
+#fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
 # create a data frame
-streamlit.dataframe(fruityvice_normalized)
+#streamlit.dataframe(fruityvice_normalized)
 
 
 streamlit.header('Fruityvice Fruit Advice')
