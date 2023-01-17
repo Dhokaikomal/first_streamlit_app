@@ -33,4 +33,7 @@ import requests
 fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
 streamlit.text(fruity_vise_response.json())      # write data on screen 
 
-#fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
+# normalized version using pandas
+fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
+# create a data frame
+streamlit.dataframe(fruityvice_normalized)
