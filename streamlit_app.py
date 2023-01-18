@@ -105,6 +105,7 @@ streamlit.dataframe(my_data_rows)
 streamlit.header('Fruityvice Fruit Advice')
 try:
  fruit_choice = streamlit.text_input('What fruit would you like information about?')
+ streamlit.write('thanks for adding',fruit_choice)
  if not fruit_choice:
   streamlit.error('please select one fruit ')
  else:
@@ -112,7 +113,7 @@ try:
   fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
 except URLError as e:
   streamlit.eerror()
-#streamlit.write('thanks for adding',fruit_choice)
+
 
 
 # my_cur.execute("insert into fruit_load_list values('from streamlit')")
