@@ -1,11 +1,19 @@
+# all import statement
 import streamlit
+import pandas
+import requests
+import snowflake.connector
+import urllib.error import URLError
+
+
+
 streamlit.title('My parents new healthy diner')
 streamlit.header('breakfast menu')
 streamlit.text('🥝omega 3 & blueberry oatmeal')
 streamlit.text('🍒kale,spinach & rocket smoothoie')
 streamlit.header('🍌🥭 Build Your Own Fruit Smoothie 🥝🍇')
 
-import pandas
+
 my_fruit_list=pandas.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
 #streamlit.dataframe(my_fruit_list)
 # choose fruit name as index
@@ -29,7 +37,7 @@ streamlit.dataframe(fruits_to_show)
 # new session to display fruity_vise_API response
 #streamlit.header("Fruityvice Fruit Advice!")
 
-import requests
+
 #fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/watermelon")
 # streamlit.text(fruity_vise_response.json())      # write data on screen 
 
@@ -56,7 +64,7 @@ streamlit.dataframe(fruityvice_normalized)
 
 # 18/1/2023
 # created new file requirements.txt
-import snowflake.connector
+
 
 
 #my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
