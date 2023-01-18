@@ -105,7 +105,7 @@ streamlit.dataframe(my_data_rows)
 
 
 # new function to access 
-def get_fruity_vice_data(this_fruit_choice):
+def get_fruity_vice_data(fruit_choice):
   fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
  
