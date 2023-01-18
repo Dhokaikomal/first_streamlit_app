@@ -108,7 +108,7 @@ streamlit.dataframe(my_data_rows)
 def get_fruity_vice_data(this_fruit_choice):
   fruity_vise_response=requests.get("https://fruityvice.com/api/fruit/"+fruit_choice)
   fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
- 
+  return fruityvice_normalized 
 
 # new section to display fruityvice api response
 streamlit.header('Fruityvice Fruit Advice')
