@@ -51,9 +51,7 @@ fruityvice_normalized = pandas.json_normalize(fruity_vise_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 
-#streamlit.header('Fruityvice Fruit Advice')
-fruit_choice = streamlit.text_input('What fruit would you like information about?')
-streamlit.write('The user entered ', fruit_choice)
+
 
 
 # 18/1/2023
@@ -77,3 +75,7 @@ streamlit.text("fruit_load_list contains:")
 streamlit.text(my_data_row)
 streamlit.dataframe(my_data_rows)
 
+
+fruit_choice = streamlit.text_input('What fruit would you like information about?')
+streamlit.write('The user entered ', fruit_choice)
+streamlit.text('thanks for adding',+fruit_choice)
