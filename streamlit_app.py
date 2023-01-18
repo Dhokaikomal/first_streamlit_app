@@ -67,6 +67,10 @@ import snowflake.connector
 # streamlit.text(my_data_row)
 
 
+
+# dont run  anything while we are in troubleshoot
+streamlit.stop()
+
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
 my_cur.execute("SELECT * from fruit_load_list")
@@ -80,8 +84,7 @@ fruit_choice = streamlit.text_input('What fruit would you like information about
 #streamlit.write('The user entered ', fruit_choice)
 streamlit.write('thanks for adding',fruit_choice)
 
+
 my_cur.execute("insert into fruit_load_list values('from streamlit')")
 
 
-# dont run  anything while we are in troubleshoot
-streamlit.stop()
